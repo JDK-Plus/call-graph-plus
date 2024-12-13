@@ -1,4 +1,4 @@
-package org.intellij.sdk.psi;
+package plus.jdk.intellij.plugin.call.graph.plus;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
-public class PsiInfoToolWindowFactory implements ToolWindowFactory {
+public class NavigationToolWindowFactory implements ToolWindowFactory {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {

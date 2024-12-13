@@ -1,4 +1,4 @@
-package org.intellij.sdk.psi;
+package plus.jdk.intellij.plugin.call.graph.plus;
 
 import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -18,7 +18,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PsiNavigationDemoAction extends AnAction {
+public class ShowNavigationAction extends AnAction {
 
   @Override
   public @NotNull ActionUpdateThread getActionUpdateThread() {
@@ -85,7 +85,7 @@ public class PsiNavigationDemoAction extends AnAction {
     }
 
     // Show information in ToolWindow
-    ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow("PSI Info");
+    ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow("call-graph-window");
     if (toolWindow != null) {
       toolWindow.activate(() -> {
         JPanel contentPanel = new JPanel();

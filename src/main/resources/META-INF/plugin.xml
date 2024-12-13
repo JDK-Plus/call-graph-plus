@@ -32,18 +32,16 @@
   <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <toolWindow id="PSI Info" icon="/icons/pluginIcon.svg" anchor="right" factoryClass="org.intellij.sdk.psi.PsiInfoToolWindowFactory"/>
+    <toolWindow id="call-graph-window" icon="/icons/pluginIcon.svg" anchor="right"
+                factoryClass="plus.jdk.intellij.plugin.call.graph.plus.NavigationToolWindowFactory"/>
   </extensions>
+
   <actions>
-    <action class="org.intellij.sdk.psi.PsiNavigationDemoAction" id="PsiNavigationDemo"
-            text="PSI Navigation Demo...">
-      <add-to-group group-id="ToolsMenu" anchor="last"/>
-    </action>
-    <action id="org.intellij.sdk.psi.PsiNavigationDemoAction"
-            class="org.intellij.sdk.psi.PsiNavigationDemoAction"
-            text="展示 PSI 信息"
+    <action id="PsiNavigationDemoAction"
+            class="plus.jdk.intellij.plugin.call.graph.plus.ShowNavigationAction"
+            text="分析代码调用图"
             description="Shows PSI information about the current method and its calls">
-      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
 
